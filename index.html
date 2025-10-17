@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+  <title>ลงทะเบียนปี 2 เทอม 2</title>
+  <style>
+    .copy-text {
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px;
+      background-color: #ffffff;
+      border: 1px solid #090101;
+      border-radius: 8px;
+      font-family: "Kanit" ;
+      margin-bottom: 15px; 
+    }
+
+    .copy-text:hover {
+      background-color: #ff9ec3;
+    }
+    body{
+        background-color: #fff0fe;
+        font-family: "Kanit" ;
+        font-size: 24px;
+        text-align: center;
+    }
+    .space-bottom {
+    margin-bottom: 24px; 
+  }
+</style>
+
+
+  </style>
+</head>
+<body>
+<p class="space-bottom">ลงทะเบียนปี 2 เทอม 2 
+  <div class="copy-text" onclick="copyToClipboard('1101071')">
+    1101071 </div><br>
+  <div class="copy-text" onclick="copyToClipboard('1101072')">
+    1101072
+  </div> <br>
+  <div class="copy-text" onclick="copyToClipboard('1101073')">
+    1101073
+  </div><br>
+
+  <div class="copy-text" onclick="copyToClipboard('1101091')">
+    1101091 G2
+  </div><br>
+
+  <div class="copy-text" onclick="copyToClipboard('1101092')">
+    1101092 G2
+  </div><br>
+
+  <div class="copy-text" onclick="copyToClipboard('1101093')">
+    1101093
+  </div><br>
+
+  <div class="copy-text" onclick="copyToClipboard('IST20 1507')">
+    IST20 1507
+  </div><br>
+
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(function() {
+
+      });
+    }
+  </script>
+  
+ 
+<img src="image0-removebg-preview.png" id="drag-img" style="position: absolute; top: 0; left: 0; width: 250px; cursor: grab;">
+
+<script>
+  const img = document.getElementById("drag-img");
+  let isDragging = false;
+  let offsetX, offsetY;
+
+  img.addEventListener("mousedown", function(e) {
+    isDragging = true;
+    offsetX = e.offsetX;
+    offsetY = e.offsetY;
+  });
+
+  document.addEventListener("mousemove", function(e) {
+    if (isDragging) {
+      img.style.left = (e.pageX - offsetX) + "px";
+      img.style.top = (e.pageY - offsetY) + "px";
+    }
+  });
+
+  document.addEventListener("mouseup", function() {
+    isDragging = false;
+  });
+</script>
+
+
+
+</body>
+</html>
